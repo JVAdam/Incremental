@@ -7,6 +7,5 @@ offset_right = 151.0
 offset_bottom = 31.0
 text = "NOME"
 script = ExtResource("1_7mjgd")
-pontos_path = null
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

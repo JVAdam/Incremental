@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwxqwdvtlxamp"]
+
+[ext_resource type="Script" uid="uid://cdyl0r5j7o1yr" path="res://scripts/upgrade_button.gd" id="1_b5ew0"]
+
+[node name="UpgradeButton" type="Button"]
+script = ExtResource("1_b5ew0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = -23.0
+offset_right = 76.0
+text = "Custo : 10"
+
+[node name="Timer" type="Timer" parent="."]

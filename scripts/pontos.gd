@@ -1,7 +1,7 @@
 extends Label
 
-var pontos = 0
+func _ready():
+	GameState.points_update.connect(_on_points_update)
 
-func add_pontos(value):
-	pontos += value
-	self.text = 'Pontos: '+ str(pontos)
+func _on_points_update(value):
+	text = "Pontos: %d" % value

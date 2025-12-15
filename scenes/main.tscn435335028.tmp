@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgdu0atgc4uaw"]
+
+[ext_resource type="Script" uid="uid://di28s5ysqpdmi" path="res://scripts/pontos.gd" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://dvkxkeomth31g" path="res://scenes/Buttons/ButtonBase.tscn" id="2_sugp2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Pontos" type="Label" parent="."]
+offset_left = 481.0
+offset_top = 158.0
+offset_right = 744.0
+offset_bottom = 181.0
+text = "Pontos: 0"
+script = ExtResource("2_0wfyh")
+
+[node name="ButtonBase" parent="." instance=ExtResource("2_sugp2")]
+offset_left = 467.0
+offset_top = 341.0
+offset_right = 618.0
+offset_bottom = 372.0

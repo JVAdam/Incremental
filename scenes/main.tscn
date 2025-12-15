@@ -1,21 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgdu0atgc4uaw"]
+[gd_scene load_steps=5 format=3 uid="uid://bgdu0atgc4uaw"]
 
 [ext_resource type="Script" uid="uid://di28s5ysqpdmi" path="res://scripts/pontos.gd" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://cylr25b1t0i2h" path="res://scenes/Buttons/ClickButton.tscn" id="2_sugp2"]
+[ext_resource type="Script" uid="uid://cb31lwcjappmx" path="res://scripts/click_value_viewer.gd" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dvkxkeomth31g" path="res://scenes/Buttons/ButtonBase.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cwxqwdvtlxamp" path="res://scenes/Buttons/UpgradeButton.tscn" id="3_sugp2"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Pontos" type="Label" parent="."]
-offset_left = 517.0
-offset_top = 145.0
-offset_right = 780.0
-offset_bottom = 168.0
+offset_left = 481.0
+offset_top = 158.0
+offset_right = 744.0
+offset_bottom = 181.0
 text = "Pontos: 0"
 script = ExtResource("2_0wfyh")
 
-[node name="Button" parent="." instance=ExtResource("2_sugp2")]
-offset_left = 458.0
-offset_top = 310.0
-offset_right = 609.0
-offset_bottom = 341.0
-pontos_path = NodePath("../Pontos")
+[node name="ClickValueViewer" type="Label" parent="."]
+offset_left = 482.0
+offset_top = 188.0
+offset_right = 615.0
+offset_bottom = 211.0
+text = "Valor do clique: 1"
+script = ExtResource("2_jyhfs")
+
+[node name="ButtonBase" parent="." instance=ExtResource("2_sugp2")]
+offset_left = 467.0
+offset_top = 341.0
+offset_right = 618.0
+offset_bottom = 372.0
+
+[node name="UpgradeButton" parent="." instance=ExtResource("3_sugp2")]
+offset_left = 650.0
+offset_top = 341.0
+offset_right = 820.0
+offset_bottom = 372.0
+text = "UPGRADE"
+button_type = 0
+price = 10
+
+[connection signal="pressed" from="UpgradeButton" to="UpgradeButton" method="_on_pressed"]
