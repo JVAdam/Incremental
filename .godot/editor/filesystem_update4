@@ -1,0 +1,8 @@
+res://scenes/main.tscn
+res://scripts/button.gd
+res://scripts/pontos.gd
+res://scenes/Button.tscn
+res://scenes/Buttons/ClickButton.tscn
+res://scenes/Buttons/Button.tscn
+res://scenes/Buttons/ButtonBase.tscn
+res://scripts/GameState.gd

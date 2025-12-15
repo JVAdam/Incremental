@@ -1,0 +1,11 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1765768934
+icon.svg::CompressedTexture2D::1026704122969750937::1765767031::1765767053::1::::<><><>0<>0<>9f0556f336ecffd3953e7b814739f58f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://scenes/::1765769116
+main.tscn::PackedScene::2815005893114158446::1765769116::0::1::::<><><>0<>0<><>::uid://di28s5ysqpdmi::::res://scripts/pontos.gd<>uid://cylr25b1t0i2h::::res://scenes/Buttons/ClickButton.tscn
+::res://scenes/Buttons/::1765769269
+Button.tscn::PackedScene::8655286126082844882::1765769070::0::1::::<><><>0<>0<><>::uid://cqi0fuj2l10av::::res://scripts/button.gd
+ClickButton.tscn::PackedScene::6481163753759111861::1765769424::0::1::::<><><>0<>0<><>::uid://dvkxkeomth31g::::res://scenes/Buttons/Button.tscn
+::res://scripts/::1765769268
+button.gd::GDScript::5913905807028634137::1765769424::0::1::::<>Button<><>0<>0<><>::
+pontos.gd::GDScript::7778548418210380388::1765768517::0::1::::<>Label<><>0<>0<><>::
