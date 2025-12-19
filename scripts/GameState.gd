@@ -7,7 +7,7 @@ signal pps_update(value)
 
 var main_scene: Node = null
 
-var points := 5000
+var points := 0
 var click_value := 1
 var pps = 0
 

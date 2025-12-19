@@ -80,7 +80,7 @@ autostart = true
 script = ExtResource("6_tefeu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(574, 324)
+position = Vector2(576, 324)
 
 [connection signal="pressed" from="UpgradeButton" to="UpgradeButton" method="_on_pressed"]
 [connection signal="pressed" from="UpgradeButton2" to="UpgradeButton2" method="_on_pressed"]
