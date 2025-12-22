@@ -5,4 +5,4 @@ func _ready():
 	GameState.spawn_on_point.connect(_on_points_update)
 
 func _on_points_update():
-	GameState.spawn(preload("res://scenes/Box.tscn"), self)
+	GameState.spawn(preload("res://scenes/BoxPhysics.tscn"), self)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1btn70f1126f"]
+
+[ext_resource type="Texture2D" uid="uid://fv250crg5s2g" path="res://images/box.png" id="1_6x3eg"]
+[ext_resource type="Script" uid="uid://bl7eigfqowijh" path="res://scripts/conveyor.gd" id="1_q3obc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3obc"]
+size = Vector2(32, 32)
+
+[node name="Conveyor" type="StaticBody2D"]
+script = ExtResource("1_q3obc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.33333334, 0.32156864, 0.3372549, 1)
+texture = ExtResource("1_6x3eg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q3obc")

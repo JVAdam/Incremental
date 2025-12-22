@@ -1,5 +1,8 @@
 extends Node
 
+# UPGRADE DA ESTEIRA
+# QUEIMAR OS BLOCOS ACIMA DA METADE DA TELA OU BLOQUEAR O BOTAO
+
 signal spawn_on_point()
 signal points_update(value)
 signal click_value_update(value)
@@ -7,7 +10,7 @@ signal pps_update(value)
 
 var main_scene: Node = null
 
-var points := 0
+var points := 9999999999999999
 var click_value := 1
 var pps = 0
 
