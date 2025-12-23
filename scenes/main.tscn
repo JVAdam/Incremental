@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgdu0atgc4uaw"]
+[gd_scene load_steps=12 format=3 uid="uid://bgdu0atgc4uaw"]
 
 [ext_resource type="Script" uid="uid://cmfpcm1tm8c34" path="res://scripts/main.gd" id="1_o6xl0"]
 [ext_resource type="Script" uid="uid://di28s5ysqpdmi" path="res://scripts/pontos.gd" id="2_0wfyh"]
@@ -8,6 +8,9 @@
 [ext_resource type="Script" uid="uid://b5wl7o6tjeu4l" path="res://scripts/pps.gd" id="3_tbgi4"]
 [ext_resource type="Script" uid="uid://c6elf24s0hk5a" path="res://scripts/timer.gd" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://b1btn70f1126f" path="res://scenes/Conveyor.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://cpo8xjucykb3j" path="res://scenes/Pointer.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://b60j3pamgntld" path="res://scenes/Buttons/DevButton.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://bwdkkad8tu64d" path="res://scenes/BoxMaker2.tscn" id="11_ya4ey"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_o6xl0")
@@ -84,8 +87,26 @@ script = ExtResource("6_tefeu")
 position = Vector2(576, 324)
 
 [node name="Conveyor" parent="." instance=ExtResource("8_tipki")]
+top_level = true
+z_index = 1
 position = Vector2(618, 640)
 scale = Vector2(50, 1)
+
+[node name="Pointer" parent="." instance=ExtResource("9_85g3d")]
+position = Vector2(1136, 560)
+scale = Vector2(1, 4)
+
+[node name="DevButton" parent="." instance=ExtResource("10_choun")]
+offset_left = 820.0
+offset_top = 58.0
+offset_right = 958.0
+offset_bottom = 89.0
+text = "DINHEIRO GRATIS"
+
+[node name="BoxMaker2" parent="." instance=ExtResource("11_ya4ey")]
+texture_filter = 1
+position = Vector2(115.00001, 48.000004)
+scale = Vector2(0.4, 0.4)
 
 [connection signal="pressed" from="UpgradeButton" to="UpgradeButton" method="_on_pressed"]
 [connection signal="pressed" from="UpgradeButton2" to="UpgradeButton2" method="_on_pressed"]

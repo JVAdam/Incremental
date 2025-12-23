@@ -3,14 +3,14 @@ extends Node
 # UPGRADE DA ESTEIRA
 # QUEIMAR OS BLOCOS ACIMA DA METADE DA TELA OU BLOQUEAR O BOTAO
 
-signal spawn_on_point()
+# signal spawn_on_point()
 signal points_update(value)
 signal click_value_update(value)
 signal pps_update(value)
 
 var main_scene: Node = null
 
-var points := 9999999999999999
+var points := 0
 var click_value := 1
 var pps = 0
 
@@ -25,7 +25,7 @@ func spawn(scene: PackedScene, parent: Node = null):
 	var instance = scene.instantiate()
 
 	if parent:
-		instance.position.x = randf_range(parent.get_viewport_rect().size.x-parent.get_viewport_rect().size.x+50, parent.get_viewport_rect().size.x-50)
+		instance.position.x = randf_range(parent.position.x-parent.position.x+110, parent.position.x-110)
 		parent.add_child(instance)
 	else:
 		instance.position.x = randf_range(main_scene.get_viewport_rect().size.x-main_scene.get_viewport_rect().size.x+50, main_scene.get_viewport_rect().size.x-50)
@@ -36,7 +36,7 @@ func spawn(scene: PackedScene, parent: Node = null):
 func add_points(value):
 	points += value
 	get_points()
-	emit_signal("spawn_on_point")
+	#emit_signal("spawn_on_point")
 
 func click_value_upgrade():
 	click_value += 1

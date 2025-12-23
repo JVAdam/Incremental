@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwdkkad8tu64d"]
+
+[ext_resource type="Texture2D" uid="uid://c0kdrl7o1vxjw" path="res://images/tunel_out.png" id="1_0po1r"]
+[ext_resource type="Texture2D" uid="uid://brmssye1dowsr" path="res://images/tunel_in.png" id="2_1dyyc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0po1r"]
+size = Vector2(354, 8.5)
+
+[node name="BoxMaker2" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("2_1dyyc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("1_0po1r")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 32.25)
+shape = SubResource("RectangleShape2D_0po1r")
