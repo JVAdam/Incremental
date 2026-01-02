@@ -1,25 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://ohchyubsc0wa"]
+[gd_scene load_steps=5 format=3 uid="uid://ohchyubsc0wa"]
 
-[ext_resource type="Texture2D" uid="uid://fv250crg5s2g" path="res://images/box.png" id="1_35fio"]
 [ext_resource type="Script" uid="uid://bhvg1o6f60hbu" path="res://scripts/box_physics.gd" id="1_dwwde"]
+[ext_resource type="Texture2D" uid="uid://olqach6d0leq" path="res://images/ball2.png" id="2_dwwde"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwwde"]
-size = Vector2(32, 32)
+[sub_resource type="Theme" id="Theme_dwwde"]
 
-[node name="BoxPhysics" type="RigidBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwwde"]
+radius = 16.0
+
+[node name="BoxPhysics" type="RigidBody2D" groups=["ball"]]
 script = ExtResource("1_dwwde")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+clip_children = 1
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_35fio")
+texture = ExtResource("2_dwwde")
 
 [node name="ColorRect" type="ColorRect" parent="Sprite2D"]
 offset_left = -16.0
 offset_top = -16.0
 offset_right = 16.0
 offset_bottom = 16.0
+theme = SubResource("Theme_dwwde")
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_dwwde")
+shape = SubResource("CircleShape2D_dwwde")

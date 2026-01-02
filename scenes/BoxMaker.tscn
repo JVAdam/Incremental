@@ -5,6 +5,7 @@
 
 [node name="BoxMaker" type="Sprite2D"]
 z_index = 1
+texture_filter = 2
 texture = ExtResource("1_0qjd7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

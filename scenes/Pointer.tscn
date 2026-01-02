@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://fv250crg5s2g" path="res://images/box.png" id="2_7i2cf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7i2cf"]
-size = Vector2(20, 19)
+size = Vector2(20, 22)
 
 [node name="Pointer" type="Area2D"]
 script = ExtResource("1_wi60y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 top_level = true
-position = Vector2(0, 5.5)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_7i2cf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

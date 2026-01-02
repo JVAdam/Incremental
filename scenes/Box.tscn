@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dr3wo8rq7h1f5"]
 
 [ext_resource type="Script" uid="uid://dcsespd8djaiu" path="res://scripts/box.gd" id="1_ew2ip"]
-[ext_resource type="Texture2D" uid="uid://fv250crg5s2g" path="res://images/box.png" id="2_ew2ip"]
+[ext_resource type="Texture2D" uid="uid://bmoenud03xk1m" path="res://images/banana.png" id="2_ew2ip"]
 
 [node name="Box" type="Node2D"]
 z_index = 1

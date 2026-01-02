@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bgdu0atgc4uaw"]
+[gd_scene load_steps=14 format=3 uid="uid://bgdu0atgc4uaw"]
 
 [ext_resource type="Script" uid="uid://cmfpcm1tm8c34" path="res://scripts/main.gd" id="1_o6xl0"]
 [ext_resource type="Script" uid="uid://di28s5ysqpdmi" path="res://scripts/pontos.gd" id="2_0wfyh"]
@@ -7,76 +7,81 @@
 [ext_resource type="PackedScene" uid="uid://cwxqwdvtlxamp" path="res://scenes/Buttons/UpgradeButton.tscn" id="3_sugp2"]
 [ext_resource type="Script" uid="uid://b5wl7o6tjeu4l" path="res://scripts/pps.gd" id="3_tbgi4"]
 [ext_resource type="Script" uid="uid://c6elf24s0hk5a" path="res://scripts/timer.gd" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://b1btn70f1126f" path="res://scenes/Conveyor.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://b1btn70f1126f" path="res://scenes/Building/Conveyor.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://cpo8xjucykb3j" path="res://scenes/Pointer.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://b60j3pamgntld" path="res://scenes/Buttons/DevButton.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://bwdkkad8tu64d" path="res://scenes/BoxMaker2.tscn" id="11_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://bmoenud03xk1m" path="res://images/banana.png" id="12_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://cl5cfppwielx" path="res://scenes/Buttons/BuildButton.tscn" id="13_trceg"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_o6xl0")
 
 [node name="Pontos" type="Label" parent="."]
-offset_left = 457.0
-offset_top = 141.0
-offset_right = 720.0
-offset_bottom = 164.0
+offset_left = 559.0
+offset_top = 14.0
+offset_right = 822.0
+offset_bottom = 37.0
 text = "Pontos: 0"
 script = ExtResource("2_0wfyh")
 metadata/_edit_use_anchors_ = true
 
 [node name="ClickValueViewer" type="Label" parent="."]
-offset_left = 458.0
-offset_top = 171.0
-offset_right = 591.0
-offset_bottom = 194.0
+offset_left = 560.0
+offset_top = 44.0
+offset_right = 693.0
+offset_bottom = 67.0
 text = "Valor do clique: 1"
 script = ExtResource("2_jyhfs")
 metadata/_edit_use_anchors_ = true
 
 [node name="PPS" type="Label" parent="."]
-offset_left = 458.0
-offset_top = 201.0
-offset_right = 631.0
-offset_bottom = 224.0
+offset_left = 560.0
+offset_top = 74.0
+offset_right = 733.0
+offset_bottom = 97.0
 text = "Pontos por segundo: 0"
 script = ExtResource("3_tbgi4")
 metadata/_edit_use_anchors_ = true
 
 [node name="ButtonBase" parent="." instance=ExtResource("2_sugp2")]
-offset_left = 443.0
-offset_top = 324.0
-offset_right = 594.0
-offset_bottom = 355.0
+offset_left = 958.0
+offset_top = 165.0
+offset_right = 1109.0
+offset_bottom = 196.0
+text = "CLIQUE!"
 metadata/_edit_use_anchors_ = true
 
 [node name="UpgradeButton" parent="." instance=ExtResource("3_sugp2")]
-offset_left = 626.0
-offset_top = 324.0
-offset_right = 796.0
-offset_bottom = 355.0
-text = "UPGRADE"
+offset_left = 958.0
+offset_top = 231.0
+offset_right = 1128.0
+offset_bottom = 285.0
+text = "AUMENTAR VALOR
+DO CLIQUE"
 price = 10
 metadata/_edit_use_anchors_ = true
 
 [node name="UpgradeButton2" parent="." instance=ExtResource("3_sugp2")]
-offset_left = 624.0
-offset_top = 437.0
-offset_right = 798.0
-offset_bottom = 468.0
-text = "UPGRADE AUTO"
+offset_left = 957.0
+offset_top = 318.0
+offset_right = 1131.0
+offset_bottom = 395.0
+text = "MÁQUINA 
+AUTOMÁTICA
++1"
 button_type = 1
 price = 15
 metadata/_edit_use_anchors_ = true
 
-[node name="UpgradeButton3" parent="." instance=ExtResource("3_sugp2")]
-offset_left = 624.0
-offset_top = 527.0
-offset_right = 798.0
-offset_bottom = 558.0
-text = "UPGRADE AUTO"
-button_type = 1
-price = 30
-button_level = 1
+[node name="UpgradeButton4" parent="." instance=ExtResource("3_sugp2")]
+offset_left = 956.0
+offset_top = 420.0
+offset_right = 1126.0
+offset_bottom = 451.0
+text = "UPGRADE ESTEIRA"
+button_type = 2
+price = 10
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="."]
@@ -93,8 +98,8 @@ position = Vector2(618, 640)
 scale = Vector2(50, 1)
 
 [node name="Pointer" parent="." instance=ExtResource("9_85g3d")]
-position = Vector2(1136, 560)
-scale = Vector2(1, 4)
+position = Vector2(1119, 560)
+scale = Vector2(2.3168864, 4)
 
 [node name="DevButton" parent="." instance=ExtResource("10_choun")]
 offset_left = 820.0
@@ -104,11 +109,24 @@ offset_bottom = 89.0
 text = "DINHEIRO GRATIS"
 
 [node name="BoxMaker2" parent="." instance=ExtResource("11_ya4ey")]
-texture_filter = 1
+texture_filter = 2
 position = Vector2(115.00001, 48.000004)
 scale = Vector2(0.4, 0.4)
 
+[node name="Banana" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1061, 79)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_eb6dy")
+
+[node name="BuildButton" parent="." instance=ExtResource("13_trceg")]
+offset_left = 820.0
+offset_top = 99.0
+offset_right = 919.0
+offset_bottom = 130.0
+text = "ABRIR LOJA"
+
 [connection signal="pressed" from="UpgradeButton" to="UpgradeButton" method="_on_pressed"]
 [connection signal="pressed" from="UpgradeButton2" to="UpgradeButton2" method="_on_pressed"]
-[connection signal="pressed" from="UpgradeButton3" to="UpgradeButton3" method="_on_pressed"]
+[connection signal="pressed" from="UpgradeButton4" to="UpgradeButton4" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

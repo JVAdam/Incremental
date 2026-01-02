@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dykp5ley8rq08"]
+
+[ext_resource type="Script" uid="uid://ch2uwcmktrs0u" path="res://scripts/BuildingsScripts/platform.gd" id="1_1oe43"]
+[ext_resource type="Texture2D" uid="uid://fv250crg5s2g" path="res://images/box.png" id="1_q8q1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1oe43"]
+size = Vector2(197, 16)
+
+[node name="Platform" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_1oe43")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(6.15625, 0.5)
+texture = ExtResource("1_q8q1t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1oe43")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

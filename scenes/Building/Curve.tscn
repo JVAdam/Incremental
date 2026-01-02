@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://m3hkl0ksji3y"]
+
+[ext_resource type="Script" uid="uid://b20nafxbicsmq" path="res://scripts/BuildingsScripts/curve.gd" id="1_724tu"]
+[ext_resource type="Texture2D" uid="uid://y805prju2j6h" path="res://images/curve.png" id="1_jl2mf"]
+
+[node name="Curve" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_724tu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_jl2mf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.75, 0.75)
+polygon = PackedVector2Array(-64, -64, -63, 4, -55, 22, -48, 33, -31, 49, -19, 57, -1.3333334, 62.666668, 64, 64, 64, 37, 50, 40, 24, 40, 8, 37.333336, 1.3333334, 34.666668, -8, 30.666668, -13.333334, 28, -17.333334, 25.333334, -20, 22.666668, -25.333334, 16, -29, 8, -32, 0, -34, -12, -34, -12, -34.666668, -21.333334, -34.666668, -37.333336, -34.666668, -48, -34, -64)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

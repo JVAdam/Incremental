@@ -21,6 +21,11 @@ func _on_pressed() -> void:
 			GameState.pps_value_upgrade(upgrade_values[button_level])
 			GameState.points -= price
 			price *= upgrade_prices[button_level]
-
+	if button_type == 2:
+		if GameState.points >= int(price):
+			GameState.conveyor_speed_upgrade(100)
+			GameState.points -= price
+			price *= 1.25
+			
 	$Label.text = "Custo: %d" % price
 	GameState.get_points()
